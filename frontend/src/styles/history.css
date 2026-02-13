@@ -1,0 +1,159 @@
+/* =========================
+   PAGE LAYOUT
+========================= */
+.page-container {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f0fdf4, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 🔥 FIX */
+  padding: 32px 16px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.history-container {
+  width: 100%;
+  max-width: 720px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   HEADER
+========================= */
+.history-container h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.history-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 8px 0 28px;
+}
+
+/* =========================
+   LOADING / EMPTY
+========================= */
+.loading-text,
+.empty-history {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  padding: 24px 0;
+}
+
+/* =========================
+   HISTORY LIST
+========================= */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =========================
+   HISTORY CARD
+========================= */
+.history-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+/* =========================
+   ROWS
+========================= */
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.history-row span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.history-row strong {
+  font-size: 14px;
+  color: #111827;
+  text-align: right;
+}
+
+/* Fare Highlight */
+.history-row.fare strong {
+  color: #16a34a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.history-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* =========================
+   BADGE
+========================= */
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.completed {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+/* =========================
+   DATE
+========================= */
+.date {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 640px) {
+  .history-container {
+    padding: 22px;
+  }
+
+  .history-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .history-row strong {
+    text-align: left;
+  }
+
+  .history-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,166 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.nav-right a {
+  margin-left: 16px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.nav-right .logout {
+  color: #dc2626;
+}
+/* ===== NAVBAR ===== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 22px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16a34a;
+  letter-spacing: 0.3px;
+}
+
+/* Nav Links */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Hover feel without animation */
+.nav-link:hover {
+  background: #f3f4f6;
+}
+
+/* Logout styling */
+.logout {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.logout:hover {
+  background: #fee2e2;
+}
+/* Logo image */
+.logo-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* Logo container */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo image FIX */
+.logo-img {
+  height: 40px;        /* control by height only */
+  width: auto;         /* keep aspect ratio */
+  object-fit: contain; /* prevent distortion */
+}
+
+/* Logo text */
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16a34a;
+}/* Navbar logo */
+.logo-img {
+  height: 42px;        /* ideal navbar size */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

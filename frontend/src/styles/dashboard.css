@@ -1,0 +1,229 @@
+/* ===============================
+   PAGE LAYOUT
+================================ */
+
+.page-container {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f0fdf4, #ecfeff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+
+/* ===============================
+   DASHBOARD CONTAINER
+================================ */
+
+.dashboard-container {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h2 {
+  font-size: 24px;
+  color: #111827;
+}
+
+
+/* ONLINE STATUS */
+
+.status-pill {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.status-pill.online {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+
+/* ===============================
+   SUBTITLE
+================================ */
+
+.dashboard-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 16px 0 26px;
+}
+
+
+/* ===============================
+   LOADING
+================================ */
+
+.loading-text {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
+/* ===============================
+   EMPTY STATE
+================================ */
+
+.empty-state {
+  text-align: center;
+  padding: 32px 12px;
+}
+
+.empty-img {
+  width: 200px;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
+/* ===============================
+   RIDE CARD
+================================ */
+
+.ride-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+
+/* RIDE INFO */
+
+.ride-info p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #374151;
+}
+
+.ride-info strong {
+  color: #111827;
+}
+
+
+/* ===============================
+   RIDE META
+================================ */
+
+.ride-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.fare {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+
+/* ===============================
+   STATUS BADGE
+================================ */
+
+.status {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.status.requested {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.status.accepted {
+  background: #ecfeff;
+  color: #0284c7;
+}
+
+.status.completed {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+
+/* ===============================
+   BUTTON
+================================ */
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.35);
+}
+
+.primary-btn.full {
+  margin-top: 12px;
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 22px;
+  }
+
+  .dashboard-header h2 {
+    font-size: 22px;
+  }
+
+  .fare {
+    font-size: 16px;
+  }
+
+  .empty-img {
+    width: 170px;
+  }
+}
