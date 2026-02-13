@@ -44,28 +44,6 @@ Drivers earn money per completed ride
 Total earnings displayed on the dashboard
 Dynamic updates after ride completion
 
-AutoService/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   │   └── AuthContext.js
-│   │   ├── services/
-│   │   └── App.js
-│
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   └── server.js
-│
-└── README.md
-
-git clone https://github.com/your-username/autoservice.git
-cd autoservice
 
 cd backend
 npm install
