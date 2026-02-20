@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import API from "../services/api";
-import { AuthContext } from "../context/AuthContext";
+//import { AuthContext } from "../context/AuthContext";
+import AuthContext from "../context/AuthContext";  
 import driverImg from "../assets/icons/driver.jpg";
 import "../styles/dashboard.css";
 

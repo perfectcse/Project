@@ -1,11 +1,10 @@
 import { useEffect, useState, useContext } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import API from "../services/api";
-import { AuthContext } from "../context/AuthContext";
+import AuthContext from "../context/AuthContext";
 
 import passengerImg from "../assets/illustrations/passenger.jpg";
 import RideTimeline from "../components/RideTimeline";
-
 import "../styles/booking.css";
 
 export default function RideStatus() {
@@ -24,6 +23,12 @@ export default function RideStatus() {
       return;
     }
 
+    if (!rideId) {
+      setError("Invalid ride ID");
+      setLoading(false);
+      return;
+    }
+
     const fetchRide = async () => {
       try {
         setLoading(true);
@@ -37,6 +42,7 @@ export default function RideStatus() {
 
         setRide(res.data);
       } catch (err) {
+        console.error("FETCH RIDE ERROR:", err);
         setError("Unable to load ride details. Please try again.");
       } finally {
         setLoading(false);
@@ -66,18 +72,15 @@ export default function RideStatus() {
     <div className="status-page">
       <div className="status-card">
 
-        {/* HEADER */}
         <div className="status-header">
           <h2>Ride Status</h2>
           <span className={`badge ${ride.status}`}>
-            {ride.status.toUpperCase()}
+            {ride.status?.toUpperCase()}
           </span>
         </div>
 
-        {/* TIMELINE */}
         <RideTimeline status={ride.status} />
 
-        {/* PASSENGER WAITING */}
         {ride.status === "requested" && (
           <div className="status-image">
             <img src={passengerImg} alt="Waiting for driver" />
@@ -86,7 +89,6 @@ export default function RideStatus() {
           </div>
         )}
 
-        {/* DETAILS */}
         <div className="status-details">
           <div className="detail-row">
             <span>Pickup</span>

@@ -1,7 +1,8 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
-import { AuthContext } from "../context/AuthContext";
+//import { AuthContext } from "../context/AuthContext";
+import AuthContext from "../context/AuthContext";
 import pickupIcon from "../assets/icons/pickup.jpg";
 import dropIcon from "../assets/icons/drop.jpg";
 
